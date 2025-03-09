@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="pico.min.css" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="container">
+      <article id="notesList"></article>
+
+      <h5>PageNotes</h5>
+
+      <form id="noteForm">
+        <input type="hidden" id="editIndex" value="-1" />
+
+        <label>
+          URL
+          <input type="text" id="urlInput" required />
+        </label>
+
+        <label>
+          URL Match Type
+          <select id="matchType" required>
+            <option value="contains">Contains</option>
+            <option value="equals">Exactly Equals</option>
+          </select>
+        </label>
+
+        <label>
+          Note
+          <textarea id="noteInput" rows="3" required></textarea>
+        </label>
+
+        <div class="grid">
+          <button type="submit" class="secondary">Save Note</button>
+          <button type="button" id="cancelEdit" class="outline">Cancel</button>
+        </div>
+      </form>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
